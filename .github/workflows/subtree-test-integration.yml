@@ -14,6 +14,7 @@ jobs:
       run: |
         git config --local user.name "Matthew Greenfield"
         git config --local user.email "mattgreenfield1@gmail.com"
+        git config -l | cat
     - name: auth github
       run: |
         mkdir ~/.ssh/
