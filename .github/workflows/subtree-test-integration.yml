@@ -10,5 +10,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v2
-    - name: Run push
-      run: git subtree push --prefix subtree-test "https://${{ secrets.GITHUB_USER }}:${{ secrets.GITHUB_TOKEN }}@github.com/omgreenfield/subtree-test.git" "master"
+    - name: Push to subtree
+      run: git subtree push --prefix subtree-test "https://${{ secrets.PUSH_USER }}:${{ secrets.PUSH_TOKEN }}@github.com/omgreenfield/subtree-test.git" "master"
+    - name: Push to subtree2
+      run: git subtree push --prefix subtree-test2 "https://${{ secrets.PUSH_USER }}:${{ secrets.PUSH_TOKEN }}@github.com/omgreenfield/subtree-test2.git" "master"
