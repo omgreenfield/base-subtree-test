@@ -20,6 +20,6 @@ jobs:
         mkdir ~/.ssh/
         ssh-keyscan github.com >> ~/.ssh/known_hosts
     - name: Push to subtree
-      run: git subtree push --prefix subtree-test "https://omgreenfield:${{ secrets.PUSH_TOKEN }}@github.com/omgreenfield/subtree-test.git" "master"
+      run: git subtree push --prefix subtree-test "https://omgreenfield:cd684ff5df93f02c36a11d9572f53f97b89b95b5@github.com/omgreenfield/subtree-test.git" "master"
     - name: Push to subtree2
-      run: git subtree push --prefix subtree-test2 "https://omgreenfield:${{ secrets.PUSH_TOKEN }}@github.com/omgreenfield2/subtree-test2.git" "master"
+      run: git subtree push --prefix subtree-test2 "https://omgreenfield:cd684ff5df93f02c36a11d9572f53f97b89b95b5@github.com/omgreenfield2/subtree-test2.git" "master"
