@@ -1,0 +1,14 @@
+name: subtree-test integration
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  push-subtree-test-changes:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Run push
+      run: git subtree push --prefix subtree-test "https://${{ secrets.GITHUB_USER }}:${{ secrets.GITHUB_TOKEN }}@github.com/omgreenfield/subtree-test.git" "master"
